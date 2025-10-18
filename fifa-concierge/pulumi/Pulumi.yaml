@@ -1,0 +1,3 @@
+name: fifa-concierge-aws
+runtime: nodejs
+description: FIFA World Cup 2026 AI Concierge Infrastructure

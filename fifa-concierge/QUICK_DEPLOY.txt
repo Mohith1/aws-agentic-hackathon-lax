@@ -1,0 +1,13 @@
+# Quick Deploy Command - Copy and Paste This
+
+# In your PowerShell terminal where Pulumi is working, run:
+
+cd C:\Users\mk504221\Projects\aws-agentic-hackathon-lax\fifa-concierge\pulumi
+
+$env:PULUMI_CONFIG_PASSPHRASE = ""
+$env:AWS_REGION = "us-east-1"
+
+pulumi up --yes
+
+# After deployment, copy the API endpoint:
+pulumi stack output apiEndpoint
