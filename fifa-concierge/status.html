@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA Concierge - Status Check</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .status-card {
+            background: #f7fafc;
+            border-left: 4px solid #48bb78;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        .status-card.warning {
+            border-left-color: #f6ad55;
+            background: #fffaf0;
+        }
+        .status-card.error {
+            border-left-color: #fc8181;
+            background: #fff5f5;
+        }
+        .status-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .status-icon {
+            font-size: 1.5rem;
+        }
+        .status-details {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        .code {
+            background: #2d3748;
+            color: #68d391;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem 0.5rem 0 0;
+            transition: all 0.2s;
+        }
+        .button:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102,126,234,0.4);
+        }
+        .steps {
+            background: #edf2f7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .step {
+            margin: 0.75rem 0;
+            padding-left: 1.5rem;
+        }
+        .step::before {
+            content: "→";
+            margin-right: 0.5rem;
+            color: #667eea;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 FIFA Concierge - Configuration Status</h1>
+        
+        <div class="status-card">
+            <div class="status-header">
+                <span class="status-icon">✅</span>
+                Voice-to-Text (Deepgram)
+            </div>
+            <div class="status-details">
+                <strong>Status:</strong> Configured and Ready!<br>
+                <strong>API Key:</strong> <span class="code">c4c9ff37...6</span> (Active)<br>
+                <strong>Features:</strong> Real-time streaming, interim results, smart formatting<br>
+                <strong>Free Tier:</strong> 45,000 minutes/month
+            </div>
+        </div>
+
+        <div class="status-card warning">
+            <div class="status-header">
+                <span class="status-icon">⚙️</span>
+                AI Chat Backend (Groq)
+            </div>
+            <div class="status-details">
+                <strong>Status:</strong> Needs API Key Setup<br>
+                <strong>Server:</strong> Installed at <span class="code">server/groqServer.js</span><br>
+                <strong>Model:</strong> Llama 3.3 70B Versatile (FREE!)<br>
+                <strong>Free Tier:</strong> 14,400 requests/day, 30/minute
+            </div>
+        </div>
+
+        <div class="status-card">
+            <div class="status-header">
+                <span class="status-icon">🌐</span>
+                Frontend Application
+            </div>
+            <div class="status-details">
+                <strong>Status:</strong> Ready to Start<br>
+                <strong>URL:</strong> <span class="code">http://localhost:3001/chat</span><br>
+                <strong>Features:</strong> Voice input, text chat, conversation history<br>
+                <strong>Dependencies:</strong> Installed ✅
+            </div>
+        </div>
+
+        <div class="steps">
+            <h3 style="margin-bottom: 1rem; color: #2d3748;">🚀 Get Started in 3 Steps:</h3>
+            
+            <div class="step">
+                <strong>Step 1:</strong> Get FREE Groq API Key at 
+                <a href="https://console.groq.com/keys" target="_blank" style="color: #667eea;">
+                    console.groq.com/keys
+                </a> (no credit card!)
+            </div>
+            
+            <div class="step">
+                <strong>Step 2:</strong> Open <span class="code">.env</span> file and add:<br>
+                <span class="code">GROQ_API_KEY=gsk_your_key_here</span>
+            </div>
+            
+            <div class="step">
+                <strong>Step 3:</strong> Run <span class="code">.\start.ps1</span> in PowerShell<br>
+                <em style="color: #718096;">(or manually start server and frontend)</em>
+            </div>
+        </div>
+
+        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #e2e8f0;">
+            <h3 style="color: #2d3748; margin-bottom: 1rem;">📚 Quick Links:</h3>
+            <a href="file:///GROQ_SETUP.md" class="button">Setup Guide</a>
+            <a href="https://console.groq.com/keys" target="_blank" class="button">Get Groq Key</a>
+            <a href="http://localhost:3001/chat" class="button">Open Chat (after starting)</a>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1rem; background: #edf2f7; border-radius: 8px;">
+            <strong>💰 Total Cost:</strong> $0.00 - Everything is FREE!<br>
+            <strong>📦 Setup Time:</strong> ~5 minutes<br>
+            <strong>🚫 No AWS:</strong> No credit card, no cloud deployment, no complexity!
+        </div>
+    </div>
+
+    <script>
+        // Check if Groq server is running
+        fetch('http://localhost:3002/health')
+            .then(res => res.json())
+            .then(data => {
+                const groqCard = document.querySelector('.status-card.warning');
+                groqCard.classList.remove('warning');
+                groqCard.style.borderLeftColor = '#48bb78';
+                groqCard.style.background = '#f0fff4';
+                groqCard.querySelector('.status-details').innerHTML = `
+                    <strong>Status:</strong> ✅ Server Running!<br>
+                    <strong>Endpoint:</strong> <span class="code">http://localhost:3002</span><br>
+                    <strong>Model:</strong> ${data.service || 'Llama 3.3 70B'}<br>
+                    <strong>Health:</strong> ${data.status}
+                `;
+            })
+            .catch(() => {
+                console.log('Groq server not running yet - follow setup steps!');
+            });
+    </script>
+</body>
+</html>

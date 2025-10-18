@@ -1,0 +1,20 @@
+{
+  "name": "fifa-concierge-infrastructure",
+  "version": "1.0.0",
+  "description": "AWS infrastructure for FIFA World Cup 2026 AI Concierge",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "pulumi up",
+    "destroy": "pulumi destroy"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^6.15.0",
+    "@pulumi/pulumi": "^3.100.0",
+    "pulumi": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  }
+}

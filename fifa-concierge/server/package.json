@@ -1,0 +1,26 @@
+{
+  "name": "fifa-concierge-server",
+  "version": "1.0.0",
+  "description": "Groq-powered backend for FIFA Concierge chat",
+  "main": "groqServer.js",
+  "scripts": {
+    "start": "node groqServer.js",
+    "dev": "nodemon groqServer.js"
+  },
+  "keywords": [
+    "groq",
+    "fifa",
+    "chatbot"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2",
+    "groq-sdk": "^0.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
