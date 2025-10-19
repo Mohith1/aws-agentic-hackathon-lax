@@ -30,11 +30,9 @@ export const QuickActionCard: React.FC<QuickActionCardProps> = ({ action }) => {
   return (
     <button
       className={`quick-action-card ${isPressed ? 'pressed' : ''}`}
+      data-action={action.id}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
-      style={{
-        background: action.gradient || action.color,
-      }}
       aria-label={`${action.title}: ${action.subtitle}`}
       role="button"
       tabIndex={0}
