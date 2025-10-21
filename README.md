@@ -21,6 +21,9 @@ FIFA 2026 Concierge is a comprehensive web application designed to enhance the e
 ## ✨ Demo 
 Drive Link - https://drive.google.com/file/d/1qKnGZiOByv1pazdDdxTH_Q-fLmuTZu33/view?usp=sharing
 
+## ✨ Presentation
+PDF Link - https://drive.google.com/file/d/1U1kXdM7JdpmYPbwlaMu9XF23-V8SLhN4/view?usp=sharing
+
 ## ✨ Key Features
 
 ### 🤖 AI-Powered Chat
